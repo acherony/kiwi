@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="postgres">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../dowedo/lib/postgresql-9.0-801.jdbc4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
