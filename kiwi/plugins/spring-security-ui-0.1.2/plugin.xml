@@ -1,0 +1,40 @@
+<plugin name='spring-security-ui' version='0.1.2' grailsVersion='1.2.2 &gt; *'>
+  <author>Burt Beckwith</author>
+  <authorEmail>beckwithb@vmware.com</authorEmail>
+  <title>User interface extensions for the Spring Security plugin.</title>
+  <description>User interface extensions for the Spring Security plugin.</description>
+  <documentation>http://grails.org/plugin/spring-security-ui</documentation>
+  <resources>
+    <resource>BuildConfig</resource>
+    <resource>Config</resource>
+    <resource>DataSource</resource>
+    <resource>DefaultUiSecurityConfig</resource>
+    <resource>grails.plugins.springsecurity.ui.AbstractS2UiController</resource>
+    <resource>grails.plugins.springsecurity.ui.AclClassController</resource>
+    <resource>grails.plugins.springsecurity.ui.AclEntryController</resource>
+    <resource>grails.plugins.springsecurity.ui.AclObjectIdentityController</resource>
+    <resource>grails.plugins.springsecurity.ui.AclSidController</resource>
+    <resource>grails.plugins.springsecurity.ui.PersistentLoginController</resource>
+    <resource>grails.plugins.springsecurity.ui.RegisterController</resource>
+    <resource>grails.plugins.springsecurity.ui.RegistrationCodeController</resource>
+    <resource>grails.plugins.springsecurity.ui.RequestmapController</resource>
+    <resource>grails.plugins.springsecurity.ui.RoleController</resource>
+    <resource>grails.plugins.springsecurity.ui.SecurityInfoController</resource>
+    <resource>grails.plugins.springsecurity.ui.UserController</resource>
+    <resource>org.codehaus.groovy.grails.plugins.springsecurity.acl.AclClass</resource>
+    <resource>org.codehaus.groovy.grails.plugins.springsecurity.acl.AclEntry</resource>
+    <resource>org.codehaus.groovy.grails.plugins.springsecurity.acl.AclObjectIdentity</resource>
+    <resource>org.codehaus.groovy.grails.plugins.springsecurity.acl.AclSid</resource>
+    <resource>org.codehaus.groovy.grails.plugins.springsecurity.ui.RegistrationCode</resource>
+    <resource>grails.plugins.springsecurity.ui.SpringSecurityUiService</resource>
+    <resource>grails.plugins.springsecurity.ui.SecurityUiTagLib</resource>
+  </resources>
+  <dependencies>
+    <plugin name='springSecurityCore' version='0.4 &gt; *' />
+    <plugin name='mail' version='0.9 &gt; *' />
+    <plugin name='jquery' version='1.4.2.5 &gt; *' />
+    <plugin name='jqueryUi' version='1.8.2.3 &gt; *' />
+    <plugin name='famfamfam' version='1.0 &gt; *' />
+  </dependencies>
+  <behavior />
+</plugin>
