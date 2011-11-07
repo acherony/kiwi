@@ -12,6 +12,7 @@ class Benutzer {
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
+    String email
 
     static hasMany = [openIds: openID]
 

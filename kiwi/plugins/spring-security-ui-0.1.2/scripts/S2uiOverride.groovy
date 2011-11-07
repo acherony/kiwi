@@ -64,8 +64,8 @@ private void copyFiles() {
 			         "$appGrailsApp/views/layouts/springSecurityUI.gsp"
 
 			ant.mkdir dir: "$appGrailsApp/views/includes"
-			copyFile "$pluginViewsDir/includes/_ajaxLogin.gsp",
-				      "$appGrailsApp/views/includes/_ajaxLogin.gsp"
+			copyFile "$pluginViewsDir/includes/_login.gsp",
+				      "$appGrailsApp/views/includes/_login.gsp"
 		}
 		else if ('auth'.equals(typeAndPackage[0])) {
 			// special case for auth.gsp

@@ -8,44 +8,10 @@
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
-    <head><title>Inserat Post</title></head>
-    <meta name="layout" content="main  "/>
-
-    <style>
-        #feedback { font-size: 1.4em; }
-        #selectable .ui-selecting { background: #FECA40; }
-        #selectable .ui-selected { background: #F39814; color: white; }
-        #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-        #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
-        #selectable option { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
-
-    </style>
-%{--    <jqgrid:resources />--}%
-    <g:javascript library="jquery" />
-    <g:javascript plugin="jquery-ui"/>
-    <g:javascript plugin="jqgrid"/>
-    <jqgrid:resources/>
-    <jqui:resources/>
-    <jq:resources/>
-%{--    <g:javascript library="jquery.jqGrid-4.1.2"/>--}%
-    <script type="text/javascript">
-        $(document).ready(function()
-        {
-          $("#datepicker").datepicker({dateFormat: 'yy/mm/dd', selectOtherMonths: true} );
-
-          $( "#selectable" ).selectable({
-			stop: function() {
-				var result = $( "#select-result" ).empty();
-				$( ".ui-selected", this ).each(function() {
-					var index = $( "#selectable li" ).index( this );
-					result.append( " #" + ( index + 1 ) );
-				});
-			}
-		  });
-
-        })
-    </script>
-
+    <head>
+        <meta name="layout" content="main"/>
+        <title>Inserat Post</title>
+    </head>
     <script type="text/javascript">
 	        $(document).ready(function() {
                          alert("'${createLink(controller: 'category',action: 'listCategory')}'")
@@ -75,6 +41,8 @@
         </script>
 
 <body>
+    <g:render template="/templates/login" />
+    <g:render template="/templates/header" />
 
 <p id="feedback">
 <span>You've selected:</span> <span id="select-result">none</span>.
@@ -130,8 +98,7 @@
     </g:javascript>
 
 
-    <g:render template="/templates/header" />
-    <g:render template="/templates/personal" />
+
     <div class="message">${message}</div>
     <g:form action="post" >
         <td valign="top" class="value ${hasErrors(bean: inseratInstance, field: 'category', 'errors')}">

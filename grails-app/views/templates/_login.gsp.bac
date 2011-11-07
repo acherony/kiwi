@@ -1,0 +1,53 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: martin.knap
+  Date: 25/10/11
+  Time: 01:15
+  To change this template use File | Settings | File Templates.
+--%>
+
+<%@ page contentType="text/html;charset=UTF-8" %>
+<div id="toppanel">
+    <div id="panel">
+            <div class="content clearfix">
+                <div class="left">
+                    <h1>Welcome to Web-Kreation</h1>
+                    <h2>Sliding login panel Demo with jQuery</h2>
+                    <p class="grey">You can put anything you want in this sliding panel: videos, audio, images, forms... The only limit is your imagination!</p>
+                    <h2>Download</h2>
+                    <p class="grey">To download this script go back to <a href="http://web-kreation.com/index.php/tutorials/nice-clean-sliding-login-panel-built-with-jquery" title="Download">article &raquo;</a></p>
+                </div>
+                <div class="left">
+                    <!-- Login Form -->
+                    <g:form controller='j_spring_security_check' name="loginForm" autocomplete='off'>
+                        <h1><g:message code='slidingLogin.login.title'/></h1>
+                        <label class="grey" for="username" >Username:</label>
+                        <input class="field" type="text" name="j_username" id="username" value="" size="23" />
+
+                        <label class="grey" for="password">Password:</label>
+                        <input class="field" type="password" name="j_password" id="password" size="23" />
+
+                        <label for='remember_me'><g:message code='spring.security.ui.login.rememberme'/>
+                            <input type="checkbox" class="checkbox" name="_spring_security_remember_me" id="remember_me" checked="checked" />
+                        </label>
+
+                        <input type="submit" name="submit" value="Login" class="bt_login" />
+                        <div id='loginMessage' style='color: red; margin-top: 10px;'></div>
+                        <g:link class="lost-pwd" controller='register' action='forgotPassword'><g:message code='spring.security.ui.login.forgotPassword'/></g:link>
+                    </g:form>
+                </div>
+                <div class="left right">
+                    <!-- Register Form -->
+                    <form action="#" method="post">
+                        <h1>Not a member yet? Sign Up!</h1>
+                        <label class="grey" for="signup">Username:</label>
+                        <input class="field" type="text" name="signup" id="signup" value="" size="23" />
+                        <label class="grey" for="email">Email:</label>
+                        <input class="field" type="text" name="email" id="email" size="23" />
+                        <label>A password will be e-mailed to you.</label>
+                        <input type="submit" name="submit" value="Register" class="bt_register" />
+                    </form>
+                </div>
+            </div>
+        </div> <!-- /login -->
+</div>

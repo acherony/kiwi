@@ -5,37 +5,12 @@
   Time: 00:30
   To change this template use File | Settings | File Templates.
 --%>
- <g:javascript library="jquery" />
-    <g:javascript plugin="jquery-ui"/>
-    <g:javascript plugin="jqgrid"/>
-    <jqgrid:resources/>
-    <jqui:resources/>
-    <jq:resources/>
-<g:applyLayout name="main">
 
-            <script type="text/javascript">
-        $(document).ready(function()
-        {
-          $("#datepicker").datepicker({dateFormat: 'yy/mm/dd', selectOtherMonths: true} );
-
-          $( "#selectable" ).selectable({
-			stop: function() {
-				var result = $( "#select-result" ).empty();
-				$( ".ui-selected", this ).each(function() {
-					var index = $( "#selectable li" ).index( this );
-					result.append( " #" + ( index + 1 ) );
-				});
-			}
-		  });
-
-        })
-    </script>
 
   <content tag="personal">
       <div id="content" class="confine">
 
   <div id="myxing">
-            <p> Between <input type="text" id="datepicker"> </p>
           <sec:ifNotLoggedIn>
               <ul>
               <li class="myxing-profil">
@@ -144,4 +119,3 @@
 
   </div>
   </content>
-</g:applyLayout>
